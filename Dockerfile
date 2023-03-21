@@ -81,6 +81,9 @@ RUN \
   install -o root -g root -m 0755 terraform-ls /usr/local/bin/terraform-ls && \
   echo "### Npm ###" && \
   npm install -g npx prettier && \
+  echo "### miniconda ###" && \
+  wget https://repo.anaconda.com/miniconda/Miniconda3-py310_23.1.0-1-Linux-x86_64.sh && \
+  bash Miniconda3-py310_23.1.0-1-Linux-x86_64.sh && \
   echo "**** clean up ****" && \
   apt-get clean && \
   rm -rf \
